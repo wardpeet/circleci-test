@@ -1,0 +1,26 @@
+version: 2.1
+
+executors:
+  node:
+    parameters:
+      image:
+        type: string
+        default: "10"
+    docker:
+      - image: circleci/node:<< parameters.image >>
+
+jobs:
+  build:
+    executor: node
+    steps:
+      - checkout
+      - run:
+        name: Install node modules
+        command: yarn --frozen-lockfile
+      - run: node index.js
+
+workflows:
+  version: 2
+  test:
+    jobs:
+      - build

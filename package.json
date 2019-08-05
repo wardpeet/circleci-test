@@ -1,0 +1,10 @@
+{
+  "name": "circle-ci-env",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Ward Peeters <ward@coding-tech.com>",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^8.0.0"
+  }
+}
