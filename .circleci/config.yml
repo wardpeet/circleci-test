@@ -5,11 +5,6 @@ jobs:
       # specify the version you desire here
       - image: circleci/node:10
 
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/mongo:3.4.4
-
     working_directory: ~/repo
 
     steps:
@@ -23,8 +18,8 @@ jobs:
             - v1-dependencies-
 
       - run:
-        name: Install node modules
-        command: yarn --frozen-lockfile
+          name: Install node modules
+          command: yarn --frozen-lockfile
 
       - save_cache:
           paths:
